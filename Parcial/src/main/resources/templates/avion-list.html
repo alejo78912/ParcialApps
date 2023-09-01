@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Aviones</title>
+</head>
+<body>
+    <h1>Lista de Aviones</h1>
+    <table>
+        <tr>
+            <th>placaAvion</th>
+            <th>horasDeVuelo</th>
+            <th>nombrePiloto</th>
+            <th>nombreCopiloto</th>
+            <th>marcaAvion</th>
+            <th>anioFabricacion</th>
+            <th>capacidadDeCombustible</th>
+        </tr>
+        <tr th:each="avion : ${aviones}">
+            <td th:text="${avion.placaAvion}"></td>
+            <td th:text="${avion.horasDeVuelo}"></td>
+            <td th:text="${avion.nombrePiloto}"></td>
+            <td th:text="${avion.nombreCopiloto}"></td>
+            <td th:text="${avion.marcaAvion}"></td>
+            <td th:text="${avion.anioFabricacion}"></td>
+            <td th:text="${avion.capacidadDeCombustible}"></td>
+        </tr>
+    </table>
+</body>
+</html>
